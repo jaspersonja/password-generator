@@ -5,7 +5,7 @@ var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var special = [ " ", "!","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[", "]", "^","_","`","{", "|","}","~"];
 var number = [ "1","2","3","4","5","6","7","8","9","0"];
 var random = []
-generateBtn = function(generateBtn.addEventListener("click", writePassword)){
+
 if (confirm("Would you like to use uppercase letters?") == true) {
   random.push(uppercase)
 } else {
@@ -26,8 +26,7 @@ if (confirm("Would you like to use numbers?") == true) {
 } else {
   text = "No problem.";
 }
-
-};
+;
 console.log(random);
 // Write password to the #password input
 function writePassword() {

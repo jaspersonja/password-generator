@@ -6,30 +6,31 @@ var special = [ " ", "!","#","$","%","&","'","(",")","*","+",",","-",".","/",":"
 var number = [ "1","2","3","4","5","6","7","8","9","0"];
 var random = []
 
-if (confirm("Would you like to use uppercase letters?") == true) {
-  random.push(uppercase)
-} else {
-  text = "No problem.";
-}
-if (confirm("Would you like to use lowercase letters?") == true) {
-  random.push(lowercase)
-} else {
-  text = "No problem.";
-}
-if (confirm("Would you like to use special characters?") == true) {
-  random.push(special)
-} else {
-  text = "No problem.";
-}
-if (confirm("Would you like to use numbers?") == true) {
-  random.push(number)
-} else {
-  text = "No problem.";
-}
-;
-console.log(random);
+
+
 // Write password to the #password input
 function writePassword() {
+  if (confirm("Would you like to use uppercase letters?") == true) {
+    random.push(uppercase)
+  } else {
+    text = "No problem.";
+  }
+  if (confirm("Would you like to use lowercase letters?") == true) {
+    random.push(lowercase)
+  } else {
+    text = "No problem.";
+  }
+  if (confirm("Would you like to use special characters?") == true) {
+    random.push(special)
+  } else {
+    text = "No problem.";
+  }
+  if (confirm("Would you like to use numbers?") == true) {
+    random.push(number)
+  } else {
+    text = "No problem.";
+  };
+  console.log(random);
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 

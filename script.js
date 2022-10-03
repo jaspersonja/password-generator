@@ -10,6 +10,10 @@ var random = []
 
 // Write password to the #password input
 function writePassword() {
+  var passwordLength = window.prompt("Choose a password length between 8-128 characters.")
+  if (passwordLength >= 8 || passwordLength <= 128){
+   random.push(passwordLength)
+  }
   if (confirm("Would you like to use uppercase letters?") == true) {
     random.push(uppercase)
   } else {
@@ -31,7 +35,9 @@ function writePassword() {
     text = "No problem.";
   };
   console.log(random);
-  var password = generatePassword();
+  var password = generatePassword() {
+    
+  };
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;

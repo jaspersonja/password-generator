@@ -35,15 +35,15 @@ function writePassword() {
     text = "No problem.";
   };
   console.log(random);
-  var password = generatePassword()
+function generatePassword(){
   for (var i = 0; i <= passwordLength; i++) {
     var passwordText = Math.floor(Math.random() * random.length);
+  }
+  return passwordText;
+  
+  }
+  generatePassword();
 
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
 }
 
 // Add event listener to generate button

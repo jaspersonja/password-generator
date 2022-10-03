@@ -12,36 +12,38 @@ var random = []
 function writePassword() {
   var passwordLength = window.prompt("Choose a password length between 8-128 characters.")
   if (passwordLength >= 8 || passwordLength <= 128){
-   random.push(passwordLength)
+    
   }
   if (confirm("Would you like to use uppercase letters?") == true) {
-    random.push(uppercase)
+    random = random.concat(uppercase);
   } else {
     text = "No problem.";
   }
   if (confirm("Would you like to use lowercase letters?") == true) {
-    random.push(lowercase)
+    random = random.concat(lowercase);
   } else {
     text = "No problem.";
   }
   if (confirm("Would you like to use special characters?") == true) {
-    random.push(special)
+    random = random.concat(special);
   } else {
     text = "No problem.";
   }
   if (confirm("Would you like to use numbers?") == true) {
-    random.push(number)
+    random = random.concat(number);
   } else {
     text = "No problem.";
   };
   console.log(random);
-  var password = generatePassword() {
-    
-  };
+  var password = generatePassword()
+  for (var i = 0; i <= passwordLength; i++) {
+    var passwordText = Math.floor(Math.random() * random.length);
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
+}
 }
 
 // Add event listener to generate button

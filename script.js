@@ -7,15 +7,13 @@ var number = [ "1","2","3","4","5","6","7","8","9","0"];
 var random = []
 var temporaryPass = []
 
-function generatePassword(array){
-  return array[Math.floor(Math.random() * array.length)];
-}
 // Write password to the #password input
 function writePassword() {
   var passwordLength = window.prompt("Choose a password length between 8-128 characters.")
   if (passwordLength >= 8 || passwordLength <= 128){
-    
-  }
+  } 
+// WINDOW PROMPTS - asking user to confirm their selections, which if true,
+// will add the variable into a new array using the .concat() method.
   if (confirm("Would you like to use uppercase letters?") == true) {
     random = random.concat(uppercase);
   } else {
@@ -37,10 +35,18 @@ function writePassword() {
     text = "No problem.";
   };
   console.log(random);
-
-  //call function
+  // WHILE LOOP - until the length meets the user selection, code will continue
+  // to push into temporary array with the randomly selected criteria.
+  while (temporaryPass.length != passwordLength) {
+    temporaryPass.push(generatePassword(random));
+  }
+  console.log(temporaryPass)
+  // ADD TEMPORARY PASSWORD
+  var passwordText = document.querySelector("#password");
+  passwordText.value = temporaryPass.join(''); // used .join() to eliminate commas between
 }
-temporaryPass.push(generatePassword(random));
-console.log(generatePassword);
+function generatePassword(array){
+  return array[Math.floor(Math.random() * array.length)];
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

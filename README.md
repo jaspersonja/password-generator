@@ -7,12 +7,9 @@ My goal for this project was to create an application that will generate a rando
 ## Usage
 
 To begin generating a new, random password, simply click the 'Generate Password' button and follow the prompts given until a lovely new password appears available for you to copy.
+ 
+  ![End Result of Password Generator](assets/pass-generator.PNG)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## License
 

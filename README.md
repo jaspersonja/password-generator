@@ -1,5 +1,5 @@
 # Password Generator
-!link to website here!
+https://jaspersonja.github.io/password-generator/ 
 ## Description
 
 My goal for this project was to create an application that will generate a random password given the user input of length and character type. I really put my knowledge of JavaScript to the test to create this page and learned a lot more about what I need to focus my attention on in JavaScript. 

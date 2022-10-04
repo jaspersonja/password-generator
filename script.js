@@ -5,9 +5,11 @@ var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var special = [ " ", "!","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[", "]", "^","_","`","{", "|","}","~"];
 var number = [ "1","2","3","4","5","6","7","8","9","0"];
 var random = []
+var temporaryPass = []
 
-
-
+function generatePassword(array){
+  return array[Math.floor(Math.random() * array.length)];
+}
 // Write password to the #password input
 function writePassword() {
   var passwordLength = window.prompt("Choose a password length between 8-128 characters.")
@@ -35,16 +37,10 @@ function writePassword() {
     text = "No problem.";
   };
   console.log(random);
-function generatePassword(){
-  for (var i = 0; i <= passwordLength; i++) {
-    var passwordText = Math.floor(Math.random() * random.length);
-  }
-  return passwordText;
-  
-  }
-  generatePassword();
 
+  //call function
 }
-
+temporaryPass.push(generatePassword(random));
+console.log(generatePassword);
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
